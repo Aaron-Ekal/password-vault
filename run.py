@@ -30,3 +30,27 @@ def check_user(user_name, password):
     '''
     check_user = Credentials.confirm_user(user_name, password)
     return check_user
+
+def new_credentials(website_name, user_name, password):
+    '''
+    Function using the Credentials class to build a new_credentials
+    Args:
+    site_name: Website to which the credentials belong to
+    user_name: The websites user_name
+    password: The website's password
+    Returns: new_credentials
+    '''
+    new_credentials = Credentials(website_name, user_name, password)
+    return new_credentials
+
+def save_credentials(credentials):
+    '''
+    function taking in the credentials and saving them to the credentials_list
+    '''
+    Credentials.save_credentials(credentials)
+
+def list_credentials(user):
+    '''
+    Function calling the list_credentials method in Credntials to list credentials per user
+    '''
+    return Credentials.list_credentials(user)
