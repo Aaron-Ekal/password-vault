@@ -63,3 +63,15 @@ class Credentials:
             if credential.user_name == user_name:
                 user_credentials_list.append(credential)
         return user_credentials_list
+
+
+    @classmethod
+    def confirm_user(cls, user_name, password):
+        '''
+        Method to check if user exists in user_list
+        '''
+        confirmed_user = ""
+        for user in User.user_list:
+            if user.user_name == user_name and user.password == password:
+                confirmed_user = user.user_name
+                return confirmed_user
