@@ -17,3 +17,16 @@ def new_user(first_name, sur_name, user_name, email, password):
     '''
     new_user = User(first_name, sur_name, user_name, email, password)
     return new_user
+
+def save_user(user):
+    '''
+    Function takes in the user returned above and saves it using the save_user method from the User class
+    '''
+    User.save_user(user)
+
+def check_user(user_name, password):
+    '''
+    Function to see if the user exists in user_list
+    '''
+    check_user = Credentials.confirm_user(user_name, password)
+    return check_user
