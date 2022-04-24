@@ -37,3 +37,6 @@ class TestUser(unittest.TestCase):
         '''
         self.new_credentials.add_credentials()
         self.assertEqual(len(Credentials.credentials_list), 1)
+
+if __name__ == "__main__":
+    unittest.nain()
