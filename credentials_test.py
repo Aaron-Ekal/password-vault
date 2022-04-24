@@ -24,3 +24,16 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_credentials.website_name, "Twitter")
         self.assertEqual(self.new_credentials.user_name, "AaronEkal")
         self.assertEqual(self.new_credentials.password, "qwerty123")
+
+    def tearDown(self):
+        '''
+        Method to clean up after test case
+        '''
+        Credentials.credentials_list = []
+
+    def test_save_credentials(self):
+        '''
+        method to save credentials
+        '''
+        self.new_credentials.add_credentials()
+        self.assertEqual(len(Credentials.credentials_list), 1)
