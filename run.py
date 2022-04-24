@@ -54,3 +54,10 @@ def list_credentials(user):
     Function calling the list_credentials method in Credntials to list credentials per user
     '''
     return Credentials.list_credentials(user)
+
+def password_builder():
+    '''
+    function calling the password builder from Credentials class
+    '''
+    password = Credentials.password_builder()
+    return password
